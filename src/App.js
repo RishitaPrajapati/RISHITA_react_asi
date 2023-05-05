@@ -13,7 +13,13 @@
 // import ImageList from "./componants/image/imageList"
 // import Main from "./componants/callingAPI/main"
 // import Main from "./componants/formHandling/form"
-import Main from "./componants/callingAPI/main"
+// import Main from "./componants/callingAPI/main"
+// import Main from "./components1/localStorage"
+// import ShowUser from "./components1/localstorage1"
+// import NewApps from "./NewApps"
+import DatatablePage from "./componants/SearchTable"
+// import SearchTable from "./SearchTable"
+
 function App() {
     return (
         <>
@@ -29,7 +35,12 @@ function App() {
             {/* <Movie /> */}
             {/* // <Main/> */}
             {/* <ImageList /> */}
-            <Main />
+            {/* <Main /> */}
+            {/* <Main/> */}
+            {/* <Main/> */}
+            {/* <ShowUser/> */}
+            {/* <NewApps /> */}
+            <DatatablePage/>
         </>
     )
 }

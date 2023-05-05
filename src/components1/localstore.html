@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div className="container">
+        <form action="">
+            <label htmlFor="">First Name:</label>
+            <input type="text" />
+            <button onClick="Login()" className="btn btn-success">login</button>
+        </form>
+        <button onClick="Logout()" className="btn btn-dark">Logout</button>
+
+        <div className="container">
+            <h1></h1>
+        </div>
+    </div>
+
+    <script>
+        let input = document.querySelector("input")
+
+        function ShowUser() {
+
+            const user = localStorage.getItem("user")
+            const info = document.querySelector("h1")
+
+            if (user) {
+                info.innerHTML = `hello ${user}`
+            } else {
+                info.innerHTML = `log in first`
+            }
+        }
+
+        function Login() {
+            let userName = input.value;
+            localStorage.setItem("user", userName)
+            ShowUser()
+        }
+
+        function Logout() {
+            localStorage.removeItem("user")
+            ShowUser()
+        }
+
+        ShowUser()
+
+    </script>
+
+
+
+</body>
+
+</html>
